@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="254.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sarefx.controller.FormCategoriaController">
+   <children>
+      <Label layoutX="22.0" layoutY="14.0" text="Id categoria" />
+      <Label layoutX="22.0" layoutY="59.0" text="Nombre" />
+      <Label layoutX="29.0" layoutY="106.0" text="Estatus" />
+      <Label layoutX="23.0" layoutY="152.0" text="Orden" />
+      <TextField fx:id="txt_idCategoria" layoutX="139.0" layoutY="9.0" />
+      <TextField fx:id="txt_nombre" layoutX="139.0" layoutY="54.0" />
+      <TextField fx:id="txt_orden" layoutX="139.0" layoutY="147.0" />
+      <Button fx:id="btn_guardar" layoutX="139.0" layoutY="207.0" mnemonicParsing="false" onAction="#guardar" text="Guardar">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn_cerrar" layoutX="270.0" layoutY="207.0" mnemonicParsing="false" onAction="#cerrar" text="Cerrar">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <CheckBox fx:id="chb_estatus" layoutX="140.0" layoutY="106.0" mnemonicParsing="false" onAction="#checkEstatus" text="Inactivo" />
+   </children>
+</Pane>

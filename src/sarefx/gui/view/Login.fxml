@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pnl_principal" prefHeight="438.0" prefWidth="658.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sarefx.controller.LoginController">
+   <children>
+      <ImageView fx:id="img_banner" fitHeight="119.0" fitWidth="658.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/banner.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_logo" fitHeight="118.0" fitWidth="186.0" layoutX="14.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pnl_panelLogin" layoutX="232.0" layoutY="119.0" prefHeight="209.0" prefWidth="410.0">
+         <children>
+            <Label fx:id="lbl_usuario" layoutX="14.0" layoutY="32.0" text="Usuraio*" />
+            <Label fx:id="lbl_contrasena" layoutX="14.0" layoutY="84.0" text="Contraseña*" />
+            <TextField fx:id="txt_usuario" layoutX="164.0" layoutY="25.0" prefHeight="31.0" prefWidth="209.0" />
+            <PasswordField fx:id="txt_contrasena" layoutX="164.0" layoutY="77.0" prefHeight="31.0" prefWidth="209.0" />
+            <Button fx:id="btn_iniciar" layoutX="128.0" layoutY="145.0" mnemonicParsing="false" onAction="#iniciarSesion" onKeyPressed="#iniciarSesion2" text="Iniciar">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/login.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_cancelar" layoutX="245.0" layoutY="145.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Label fx:id="lbl_mensaje" layoutX="173.0" layoutY="362.0" prefHeight="31.0" prefWidth="410.0" />
+   </children>
+</AnchorPane>

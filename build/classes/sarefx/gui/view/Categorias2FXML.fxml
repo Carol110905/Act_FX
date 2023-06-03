@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sarefx.controller.CategoriasController">
+   <children>
+      <Pane fx:id="pnl_busqueda" layoutX="6.0" prefHeight="73.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="lbl_idCategoria" layoutX="14.0" layoutY="33.0" text="Código" />
+            <TextField fx:id="txt_idcategoria" layoutX="72.0" layoutY="28.0" />
+            <Button fx:id="btn_buscar" layoutX="546.0" layoutY="28.0" mnemonicParsing="false" onAction="#buscarCategorias" text="Buscar">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btn_limpiar" layoutX="661.0" layoutY="28.0" mnemonicParsing="false" text="Limpiar">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/clearfields.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </Pane>
+      <SplitPane fx:id="pnl_tablas" dividerPositions="0.5" layoutY="74.0" orientation="VERTICAL" prefHeight="523.0" prefWidth="806.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="257.0" prefWidth="796.0">
+               <children>
+                  <Text fx:id="lbl_Categorias" layoutX="14.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categorías">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Text>
+                  <Pane fx:id="pnl_accionesCategoria" layoutX="-1.0" layoutY="25.0" prefHeight="50.0" prefWidth="764.0">
+                     <children>
+                        <Button fx:id="btn_nuevaCategoria" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#nuevaCategoria" text="Nueva">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btn_editarCategoria" layoutX="130.0" layoutY="10.0" mnemonicParsing="false" onAction="#editarCategoria" text="Editar">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/edit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btn_activarCategoria" layoutX="229.0" layoutY="10.0" mnemonicParsing="false" onAction="#activarCategoria" text="Activar">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/alta.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btn_desactivarCategoria" layoutX="329.0" layoutY="10.0" mnemonicParsing="false" onAction="#DesactivarCategoria" text="Desactivar">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/down.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                     </children>
+                  </Pane>
+                  <TableView fx:id="tbl_categorias" layoutX="-1.0" layoutY="78.0" onMouseClicked="#clickTable" prefHeight="180.0" prefWidth="806.0">
+                    <columns>
+                      <TableColumn fx:id="tcl_categoriaIdCategoria" prefWidth="124.0" text="Id Categoria" />
+                      <TableColumn fx:id="tcl_categoriaNombre" prefWidth="436.0" text="Nombre" />
+                        <TableColumn fx:id="tcl_categoriaActivo" prefWidth="115.0" text="Activo" />
+                        <TableColumn fx:id="tcl_categoriaOrden" prefWidth="86.0" text="Orden" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="762.0">
+               <children>
+                  <Text fx:id="lbl_Catalogos" layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Catálogos">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Text>
+                  <Pane fx:id="pnl_accionesCatalogo" layoutX="-1.0" layoutY="35.0" prefHeight="44.0" prefWidth="806.0">
+                     <children>
+                        <Button fx:id="btn_nuevoCatalogo" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" text="Nuevo">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btn_editarCatalogo" layoutX="126.0" layoutY="7.0" mnemonicParsing="false" text="Editar">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/edit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btn_activarCatalogo" layoutX="225.0" layoutY="7.0" mnemonicParsing="false" text="Activar">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/alta.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btn_desactivarCatalogo" layoutX="339.0" layoutY="7.0" mnemonicParsing="false" text="Desactivar">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/down.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                     </children>
+                  </Pane>
+                  <TableView fx:id="tbl_catalogos" layoutX="-2.0" layoutY="83.0" prefHeight="197.0" prefWidth="806.0">
+                    <columns>
+                      <TableColumn fx:id="tcl_catalogoIdCatlogo" prefWidth="120.0" text="Id Catálogo" />
+                      <TableColumn fx:id="tcl_catalogoNombre" prefWidth="431.0" text="Nombre" />
+                        <TableColumn fx:id="tcl_catalogoActivo" prefWidth="112.0" text="Activo" />
+                        <TableColumn fx:id="tcl_catalogoOrden" prefWidth="100.0" text="Orden" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</Pane>

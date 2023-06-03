@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="pnl_principal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sarefx.controller.PrincipalController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+            <Menu fx:id="m_inicio" mnemonicParsing="false" onAction="#inicio" text="Inicio" />
+          <Menu fx:id="m_rh" mnemonicParsing="false" text="RRHH">
+            <items>
+              <MenuItem fx:id="mi_personal" mnemonicParsing="false" text="Administrar Personal" />
+            </items>
+          </Menu>
+            <Menu fx:id="m_administracion" mnemonicParsing="false" text="Administracion">
+              <items>
+                <MenuItem fx:id="mi_usuarios" mnemonicParsing="false" text="Usuarios" />
+                  <MenuItem fx:id="mi_categoris" mnemonicParsing="false" onAction="#abrirCategorias" text="Categoris/Catalogos" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
